@@ -1,5 +1,6 @@
-var express = require('express')
+const express = require('express')
 const app = express()
+const port = 9000
 app.get('/',function(req,res){
     res.send('Hello Client!')
 })
@@ -19,7 +20,7 @@ app.get('/user',function(req,res){
     res.send('Welcome User'+id)
 })
 app.listen(9000,function(req,res){
-    console.log('Running..')
+    console.log(`Example app listening at http://localhost:${port}`)
 })
 
 
